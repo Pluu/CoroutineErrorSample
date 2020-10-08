@@ -39,6 +39,7 @@ class MainViewModelTest {
 
     @Test
     fun failError() = runBlockingTest {
+        // Issues : https://github.com/mockito/mockito/issues/1166?fbclid=IwAR0AAo-Ze5uX2JEZqc2a0N2k44mBxNP7J1jUnhDwGDoq8dA5UEnwdiUO0qA
         whenever(apiService.contributors(any(), any()))
             .doThrow(Throwable("Error"))
 
